@@ -205,7 +205,7 @@ pub fn random_port_multi(num: usize) -> Vec<u16> {
     let mut rng = rand::thread_rng();
     let mut ret = Vec::new();
     for _ in 0..num {
-        let p = rng.gen_range(1024..=65535);
+        let p = rng.gen_range(1024..65535);
         ret.push(p)
     }
     ret
